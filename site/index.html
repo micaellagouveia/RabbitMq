@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Home - RabbitMQ</title>
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> RabbitMQ</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#rabbitmq">RabbitMq</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#client-tcp-server">Client -&gt; TCP -&gt; Server</a></li>
+        
+            <li><a class="toctree-l3" href="#publisher-exchange-queue-consumer">Publisher  -&gt;  Exchange  -&gt;  Queue  -&gt;  Consumer</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resumos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Resumos/fanout/">Fanout</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Resumos/queue/">Queue</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">RabbitMQ</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="rabbitmq">RabbitMq</h1>
+<ul>
+<li><strong>Message broker</strong>: intermédio entre a mensagem recebida e quem a enviou.</li>
+<li>Utiliza HTTP request.</li>
+</ul>
+<h2 id="client-tcp-server">Client -&gt; TCP -&gt; Server</h2>
+<p>O rabbitMQ abre apenas uma conexão com o server, e dentro dela há subconexões(<strong>channels</strong>).
+* Channels são como threads.</p>
+<h2 id="publisher-exchange-queue-consumer">Publisher  -&gt;  Exchange  -&gt;  Queue  -&gt;  Consumer</h2>
+<p>A <strong>exchange</strong> processa a mensagem e manda para uma determinada fila (queue).</p>
+<h3 id="exchanges">Exchanges</h3>
+<p><img alt="RabbitMQ" src="/assets/rabbitMQ.jpg" /></p>
+<h4 id="1-direct">1. Direct</h4>
+<ul>
+<li>Há uma routing key que determina para qual fila a mensagem será enviada.</li>
+</ul>
+<h4 id="2-fanout">2. Fanout</h4>
+<ul>
+<li>Não há uma routing key, então a mensagem é replicada para todas as filas que estão relacionadas com a exchange.<br>
+<a href="Resumos/fanout/">Mais sobre Fanout</a></li>
+</ul>
+<h4 id="3-topic">3. Topic</h4>
+<ul>
+<li>Possui uma routing key com regras, com um padrão. Apenas mensagem com aquele padrão entram na determinada fila.</li>
+</ul>
+<h3 id="queues"><a href="Resumos/queue/">Queues</a></h3>
+<p>Filas são FIFO (First in First out).</p>
+<h4 id="propriedades">Propriedades</h4>
+<ul>
+<li><strong>Durable</strong>: quando reiniciar o broker, a fila continua lá.</li>
+<li><strong>Auto Delete</strong>: quando o consumer se desconecta, a fila é apagada.</li>
+<li><strong>Expiry</strong>: Tempo de espera de inatividade.</li>
+<li><strong>Message TTL</strong>: tempo de vida de mensagem.</li>
+<li><strong>Exclusive</strong>: usada por apenas uma conexão e a fila será excluída quando a conexão for fechada.</li>
+<li><strong>Max length ou bytes</strong>: quantidade máxima de mensagens ou de bytes.</li>
+<li><strong>Overflow</strong>: limite de mensagens ou bytes.</li>
+</ul>
+<p><a href="Resumos/queue/">Mais sobre Queues</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Resumos/fanout/" class="btn btn-neutral float-right" title="Fanout">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="Resumos/fanout/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2020-03-23 20:38:26
+-->

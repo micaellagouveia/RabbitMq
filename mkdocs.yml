@@ -1,6 +1,8 @@
 site_name: RabbitMQ
 pages:
   - Home: index.md
-  - Resumos: resumos.md
+  - Resumos:
+    - Fanout: Resumos/fanout.md
+    - Queue: Resumos/queue.md
 
 theme: readthedocs

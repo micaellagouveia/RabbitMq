@@ -27,9 +27,6 @@ amqp.connect('amqp://localhost', function (error0, connection) {
 
         channel.prefetch(1) //apenas 1 msg por vez para cada consumer
 
-        //Vamos dizer ao sevidor para nos entregar as mensagens da fila.Como ele enviará mensagens de forma assíncrona,
-        //fornecemos um retorno de chamada que será executado quando o RabbitMQ enviar mensagens para o consumidor.
-
         console.log(' [x] Waiting for messages in %s.To exit press CTRL+C', queue)
 
         channel.consume(queue, function (msg) {

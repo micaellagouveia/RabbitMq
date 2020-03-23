@@ -10,8 +10,10 @@ Filas são FIFO (First in First out).
 * **Max length ou bytes**: quantidade máxima de mensagens ou de bytes.
 * **Overflow**: limite de mensagens ou bytes.
 
-## Blinds
-Processo que relaciona a fila com a exchange. A fila que tiver **blind** possui uma conexão com a exchange. No caso da exchange Fanout, todas as que possuem blind irão receber a mensagem.
+## Bindings
+Processo que relaciona a fila com a exchange. A fila que tiver **bind** possui uma conexão com a exchange. No caso da exchange Fanout, todas as que possuem blind irão receber a mensagem.
+<br>
+Para ver a lista de bindings:  ***rabbitmqctl list_bindings***
 
 ## Dead Letter Queue
 Algumas mensagens não conseguem ser entregues por algum motivo. Elas são encaminhadas para uma exchange que manda para uma fila dead letter. Outro sistema buscará o motivo para ela não ter sido lida.

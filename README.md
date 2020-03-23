@@ -29,7 +29,7 @@ Filas são FIFO (First in First out).
 * **Auto Delete**: quando o consumer se desconecta, a fila é apagada.
 * **Expiry**: Tempo de espera de inatividade.
 * **Message TTL**: tempo de vida de mensagem.
-* **Exclusive**: somente o channel que criou a fila pode acessá-la.
+* **Exclusive**: usada por apenas uma conexão e a fila será excluída quando a conexão for fechada.
 * **Max length ou bytes**: quantidade máxima de mensagens ou de bytes.
 * **Overflow**: limite de mensagens ou bytes.
 

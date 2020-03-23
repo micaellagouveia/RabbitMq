@@ -11,7 +11,7 @@ O rabbitMQ abre apenas uma conexão com o server, e dentro dela há subconexões
 A **exchange** processa a mensagem e manda para uma determinada fila (queue).
 
 ### Exchanges
-![RabbitMQ](/assets/rabbitMQ.jpg)
+![RabbitMQ](./assets/rabbitMQ.jpg)
 #### 1. Direct
 * Há uma routing key que determina para qual fila a mensagem será enviada.
 

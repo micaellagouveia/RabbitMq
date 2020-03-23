@@ -16,7 +16,8 @@ A **exchange** processa a mensagem e manda para uma determinada fila (queue).
 * Há uma routing key que determina para qual fila a mensagem será enviada.
 
 #### 2. Fanout
-* Não há uma routing key, então a mensagem é replicada para todas as filas que estão relacionadas com a exchange.
+* Não há uma routing key, então a mensagem é replicada para todas as filas que estão relacionadas com a exchange.<br>
+[Mais sobre Fanout](/Resumos/fanout.md)
 
 #### 3. Topic
 * Possui uma routing key com regras, com um padrão. Apenas mensagem com aquele padrão entram na determinada fila.

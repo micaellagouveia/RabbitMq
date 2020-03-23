@@ -21,7 +21,7 @@ A **exchange** processa a mensagem e manda para uma determinada fila (queue).
 #### 3. Topic
 * Possui uma routing key com regras, com um padrão. Apenas mensagem com aquele padrão entram na determinada fila.
 
-### Queues
+### [Queues](/Resumos/queue.md)
 Filas são FIFO (First in First out).
 
 #### Propriedades
@@ -33,8 +33,4 @@ Filas são FIFO (First in First out).
 * **Max length ou bytes**: quantidade máxima de mensagens ou de bytes.
 * **Overflow**: limite de mensagens ou bytes.
 
-#### Dead Letter Queue
-Algumas mensagens não conseguem ser entregues por algum motivo. Elas são encaminhadas para uma exchange que manda para uma fila dead letter. Outro sistema buscará o motivo para ela não ter sido lida.
-
-### Blinds
-Processo que relaciona a fila com a exchange. A fila que tiver **blind** possui uma conexão com a exchange. No caso da exchange Fanout, todas as que possuem blind irão receber a mensagem.
+[Mais sobre Queues](/Resumos/queue.md)

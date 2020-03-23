@@ -11,18 +11,18 @@ O rabbitMQ abre apenas uma conexão com o server, e dentro dela há subconexões
 A **exchange** processa a mensagem e manda para uma determinada fila (queue).
 
 ### Exchanges
-![RabbitMQ](/assets/rabbitMQ.jpg)
+![RabbitMQ](docs/assets/rabbitMQ.jpg)
 #### 1. Direct
 * Há uma routing key que determina para qual fila a mensagem será enviada.
 
 #### 2. Fanout
 * Não há uma routing key, então a mensagem é replicada para todas as filas que estão relacionadas com a exchange.<br>
-[Mais sobre Fanout](/Resumos/fanout.md)
+[Mais sobre Fanout](docs/Resumos/fanout.md)
 
 #### 3. Topic
 * Possui uma routing key com regras, com um padrão. Apenas mensagem com aquele padrão entram na determinada fila.
 
-### [Queues](/Resumos/queue.md)
+### [Queues](docs/Resumos/queue.md)
 Filas são FIFO (First in First out).
 
 #### Propriedades
@@ -34,4 +34,4 @@ Filas são FIFO (First in First out).
 * **Max length ou bytes**: quantidade máxima de mensagens ou de bytes.
 * **Overflow**: limite de mensagens ou bytes.
 
-[Mais sobre Queues](/Resumos/queue.md)
+[Mais sobre Queues](docs/Resumos/queue.md)

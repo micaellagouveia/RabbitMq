@@ -1,8 +1,10 @@
 site_name: RabbitMQ
-pages:
+nav:
   - Home: index.md
   - Resumos:
     - Fanout: Resumos/fanout.md
     - Queue: Resumos/queue.md
 
-theme: readthedocs
+theme:
+  name: null
+  custom_dir: 'cinder'

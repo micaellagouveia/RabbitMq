@@ -21,6 +21,9 @@ A **exchange** processa a mensagem e manda para uma determinada fila (queue).
 
 #### 3. Topic
 * Possui uma routing key com regras, com um padrão. Apenas mensagem com aquele padrão entram na determinada fila.
+Existem dois casos especiais importantes para vincular chaves:
+1. '*' (estrela) pode substituir exatamente uma palavra.
+2. '#' (hash) pode substituir por zero ou por mais palavras.
 
 ### [Queues](docs/Resumos/queue.md)
 Filas são FIFO (First in First out).

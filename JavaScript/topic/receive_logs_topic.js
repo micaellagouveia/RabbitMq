@@ -27,13 +27,14 @@ amqp.connect('amqp://localhost', function(error0, connection) {
 
     channel.assertQueue('', {
       exclusive: true
-    }, function(error2, q) {
+    }, function(error2, q) { // q -> retorna uma json. q.queue -> nome da fila
       if (error2) {
         throw error2;
       }
       console.log(' [*] Waiting for logs. To exit press CTRL+C');
-
       args.forEach(function(key) {
+          //no terminal eu estou determinando quantos binds existirão para uma mesma fila.
+          //node receive.js "x" "y" "z" -> para a mesma fila, receberão as chaves x, y e z.
         channel.bindQueue(q.queue, exchange, key);
       });
 

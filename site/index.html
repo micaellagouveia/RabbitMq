@@ -151,7 +151,10 @@
 </ul>
 <h4 id="3-topic">3. Topic</h4>
 <ul>
-<li>Possui uma routing key com regras, com um padrão. Apenas mensagem com aquele padrão entram na determinada fila.</li>
+<li>Possui uma routing key com regras, com um padrão. Apenas mensagem com aquele padrão entram na determinada fila.
+Existem dois casos especiais importantes para vincular chaves:</li>
+<li>'*' (estrela) pode substituir exatamente uma palavra.</li>
+<li>'#' (hash) pode substituir por zero ou por mais palavras.</li>
 </ul>
 <h3 id="queues"><a href="Resumos/queue/">Queues</a></h3>
 <p>Filas são FIFO (First in First out).</p>
@@ -260,5 +263,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2020-03-23 20:56:10
+Build Date UTC : 2020-03-24 17:21:46
 -->

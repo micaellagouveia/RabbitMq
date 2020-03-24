@@ -2,8 +2,9 @@ site_name: RabbitMQ
 nav:
   - Home: index.md
   - Resumos:
-    - Fanout: Resumos/fanout.md
     - Queue: Resumos/queue.md
+    - Fanout: Resumos/fanout.md
+    - Topic: Resumos/topic.md
 
 theme:
   name: null

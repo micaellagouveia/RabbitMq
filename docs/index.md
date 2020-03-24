@@ -25,6 +25,8 @@ Existem dois casos especiais importantes para vincular chaves:
 1. '*' (estrela) pode substituir exatamente uma palavra.
 2. '#' (hash) pode substituir por zero ou por mais palavras.
 
+[Exemplo de Topic](./Resumos/topic.md)
+
 ### [Queues](./Resumos/queue.md)
 Filas são FIFO (First in First out).
 

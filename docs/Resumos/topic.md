@@ -9,7 +9,7 @@ Criamos três ligações:<br>
 1. Q1 é ligado com a chave de ligação "* .orange. *"
 2. Q2 com "*. *. Rabbit" e "lazy. #"
 
-![Exemplo](/assets/example.png)
+![Exemplo](topic.png)
 
 <br>
 Essas ligações podem ser resumidas como:
